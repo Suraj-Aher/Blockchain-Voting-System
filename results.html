@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Voting Results</h1>
+
+        <h2>Valid Votes:</h2>
+        <ul>
+            {% for vote in valid_votes %}
+                <li>{{ vote.voter_id }} voted for {{ vote.candidate }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Fake Votes Detected:</h2>
+        <ul>
+            {% for vote in fake_votes %}
+                <li>Fake voter ID: {{ vote.voter_id }}, Candidate Voted: {{ vote.candidate }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
