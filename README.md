@@ -37,9 +37,14 @@ Visit   >>  http://127.0.0.1:5000/   <<  in your browser.
 Sample Voter IDs
 
 Voter ID	       Valid
+
 voter_1	   ✅    Valid
+
 voter_15	 ✅    Valid
+
 fake_123	 ❌    Invalid
+
+
 Advantages
 
 Security & Transparency: Votes are immutable.
